@@ -3,7 +3,7 @@ import overlayIllustration from 'assets/illustrations/overlay.svg';
 
 export const Wrapper = styled.div`
   padding-bottom: 4rem;
-  background-image: url(${overlayIllustration});
+  // background-image: url(${overlayIllustration});
   background-size: contain;
   background-position: right top;
   background-repeat: no-repeat;
@@ -30,13 +30,24 @@ export const Details = styled.div`
 
   h1 {
     margin-bottom: 2rem;
-    font-size: 36pt;
+    font-size: 40pt;
     color: #212121;
+    position: relative;
+    
 
     @media (max-width: 680px) {
       font-size: 30pt;
     }
   }
+
+  // h1::after {
+  //   content: '';
+  //   position: absolute;
+  //   background-color: #659C41;
+  //   height: 10px;
+  //   width: 50%;
+  //   display: block;
+  // }
 
   h4 {
     margin-bottom: 2.5rem;

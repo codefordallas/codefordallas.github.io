@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import detailsIllustration from 'assets/illustrations/details.svg';
 
 export const Wrapper = styled.div`
-  // background-image: url(${detailsIllustration});
   background-size: contain;
   background-position: left top;
   background-repeat: no-repeat;
+  background-color: #6FACD5;
 `;
 
 export const SkillsWrapper = styled.div`
@@ -21,7 +21,7 @@ export const SkillsWrapper = styled.div`
 
 export const Details = styled.div`
   flex: 1;
-  padding-left: 2rem;
+  text-align: center;
 
   @media (max-width: 960px) {
     padding-left: unset;
@@ -30,8 +30,8 @@ export const Details = styled.div`
 
   h1 {
     margin-bottom: 2rem;
-    font-size: 26pt;
-    color: #212121;
+    font-size: 35pt;
+    color: white;
   }
 
   p {
@@ -39,7 +39,7 @@ export const Details = styled.div`
     font-size: 20pt;
     font-weight: normal;
     line-height: 1.3;
-    color: #707070;
+    color: white;
   }
 `;
 

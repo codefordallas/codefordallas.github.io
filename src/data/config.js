@@ -1,10 +1,10 @@
 module.exports = {
-  defaultTitle: 'John Doe',
+  defaultTitle: 'Code for Dallas',
   logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
-  author: 'John Doe',
+  author: 'Code for Dallas',
   url: 'https://portfolio.smakosh.com',
-  legalName: 'John Doe',
-  defaultDescription: 'I’m John and I’m a Backend & Devops engineer!',
+  legalName: 'Code for Dallas',
+  defaultDescription: 'Code for Dallas is a local brigade of Code for America.',
   socialLinks: {
     twitter: 'http://www.twitter.com/smakosh',
     github: 'https://github.com/smakosh',

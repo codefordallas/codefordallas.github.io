@@ -4,23 +4,17 @@ import { Container, Button } from 'components/common';
 import dev from 'assets/illustrations/skills.svg';
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles';
 
-export const Skills = () => (
+export const About = () => (
   <Wrapper id="about">
     <SkillsWrapper as={Container}>
-      <Thumbnail>
-        <img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
-      </Thumbnail>
       <Details>
-        <h1>Join Us!</h1>
+        <h1>Who We Are</h1>
         <p>
-          Want to get involved with Code for Dallas?
+        Our mission is to harness the digital era to make government work for the people, by the people! Our focus is on making the biggest impact on the needs of our community and advocating for open government and open data.
         </p>
-        <Button as={AnchorLink} href="#contact">
-          Slack
-        </Button>
-        <Button as={AnchorLink} href="#contact">
-          Meetup
-        </Button>
+        {/* <Button as={AnchorLink} href="#contact">
+          Hire me
+        </Button> */}
       </Details>
     </SkillsWrapper>
   </Wrapper>

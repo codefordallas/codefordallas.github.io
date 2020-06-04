@@ -207,6 +207,9 @@ export const Global = createGlobalStyle`
       padding-top: 0;
       margin-bottom: 1.45rem;
     }
+    h1, h2, h3 {
+      font-family: 'Archivo Black', 'Roboto', Helvetica, sans-serif;
+    }
     h1 {
       margin-left: 0;
       margin-right: 0;

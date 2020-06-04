@@ -26,3 +26,5 @@
     url('./fonts/roboto-v18-latin-700.ttf') format('truetype'),
     url('./fonts/roboto-v18-latin-700.svg#Roboto') format('svg');
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
