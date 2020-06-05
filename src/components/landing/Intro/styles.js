@@ -51,7 +51,7 @@ export const Details = styled.div`
 
   h4 {
     margin-bottom: 2.5rem;
-    font-size: 32pt;
+    font-size: 24pt;
     font-weight: normal;
     color: #707070;
 

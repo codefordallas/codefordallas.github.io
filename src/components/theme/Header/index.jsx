@@ -8,7 +8,7 @@ export const Header = () => {
   const [sidebar, toggle] = useState(false);
 
   return (
-    <Wrapper style={{position: "fixed", backgroundColor: "white"}}>
+    <Wrapper style={{position: "fixed", zIndex: "100", backgroundColor: "white"}}>
       <Overlay sidebar={sidebar} onClick={() => toggle(!sidebar)} />
       <Navbar />
       <Hamburger sidebar={sidebar} toggle={toggle} />

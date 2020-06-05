@@ -8,9 +8,12 @@ export const Footer = () => (
     <Flex as={Container}>
       <Details>
         <h2>Let's put a slogan here.</h2>
-        <span>
+        <p style={{marginBottom: "0.5em"}}>
           © {new Date().getFullYear()} Code for Dallas. All rights reserved
-        </span>
+        </p>
+        <p>
+          Code for Dallas is a brigade of <a href="https://www.codeforamerica.org/">Code for America</a>.
+        </p>
       </Details>
       <Links>
         {social.map(({ id, name, link, icon }) => (

@@ -11,8 +11,9 @@ export const Intro = () => (
     <Header />
     <IntroWrapper as={Container}>
       <Details>
-        <h1>We are Code for Dallas</h1>
-        <h4>A volunteer-led civic technology organization that brings together developers, designers, data enthusiasts and city staff.</h4>
+        <h1>At the intersection of technology and government.</h1>
+        <h4>We're a nonprofit with the mission to unite developers, designers, and city staff for the good of all.</h4>
+        {/* <h4>We're volunteer-led civic technology organization that brings together developers, designers, data enthusiasts and city staff.</h4> */}
         <Button as={AnchorLink} href="#about">
           Learn more
         </Button>
