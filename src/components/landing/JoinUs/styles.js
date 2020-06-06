@@ -55,3 +55,11 @@ export const Thumbnail = styled.div`
     width: 100%;
   }
 `;
+
+export const Button = styled.div`
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  height: 3em;
+  border: 1px solid #0074d9;
+`;
