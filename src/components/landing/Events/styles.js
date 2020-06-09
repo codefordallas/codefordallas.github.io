@@ -26,29 +26,32 @@ export const EventsHeader = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 8fr;
   gap: 1.2rem 1.2rem;
+  align-items: center;
+  justify-items: center;
   p {
     margin-top: 2em;
   }
 
-  @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  // @media (max-width: 960px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1328px) {
     grid-template-columns: 1fr;
   }
 `;
 
 export const Item = styled.div`
-  width: 100%;
   height: 100%;
   overflow: hidden;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
   color: inherit;
+  position: relative;
+  width: 520px;
+  display: flex;
 
   h4 {
     color: #212121;
@@ -72,11 +75,13 @@ img {
 export const EventImage = styled.div`
 height: 368px;
 text-align: center;
-position: relative;
+position: absolute;
+bottom: 30px;
+right: 50%;
 
 img {
   max-width: none;
-  height: inherit;
+  height: 80%;
   transition: height 0.5s ease-in-out, filter 0.5s ease-in-out;
   display: block;
   position: absolute;
@@ -87,9 +92,14 @@ img {
 }
 
 img:hover {
-  height: 280px;
-  filter: brightness(50%);
+  height: 83.5%;
+  filter: brightness(70%);
 }
+}
+`
 
-}
+export const FillerDiv = styled.div`
+  height:360px;
+  width:100%;
+  position:relative;
 `

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Card, SectionHeading } from 'components/common';
-import { Wrapper, SmallWrapper, Grid, Item, EventsHeader, AttributeItem, EventImage} from './styles';
+import { Wrapper, SmallWrapper, Grid, Item, EventsHeader, AttributeItem, EventImage, FillerDiv} from './styles';
 import funinthesun from 'assets/images/funinthesun.jpeg'
 import opendataday from 'assets/images/opendataday.png'
 import codeforthecount from 'assets/images/codeforthecount.jpeg'
@@ -75,6 +75,7 @@ function EventCard(props) {
             {props.location}
           </AttributeItem>
           <p>{props.description}</p>
+          <FillerDiv></FillerDiv>
           <EventImage>
           <img src={props.image}></img>
           </EventImage>
