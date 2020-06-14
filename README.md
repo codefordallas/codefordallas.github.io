@@ -2,18 +2,18 @@
 
 A clean and modern homepage for a clean and modern organization. This site was built using Gatsby, a static site generator. Currently under development.
 
-# To do
+## To do
 
 Aside from minor optimizations, here are the main checklist items before we move to production:
 - Edit environment variables (GitHub token, Formcarry endpoint and Recaptcha key). 
 - Update projects section, which currently just fetches Anthony's top repositories from GitHub (we could replace it with a slideshow or something).
 - Update team member descriptions and photos.
 
-# Contributing
+## Contributing
 
 We welcome contributions to this project. First of all, here's the project structure:
 
-## Structure
+### Structure
 
 ```bash
 .
@@ -32,7 +32,7 @@ We welcome contributions to this project. First of all, here's the project struc
 └── static                  # favicon & Netlify redirects
 ```
 
-## Get started
+### Get started
 
 If you're familiar with Gatsby, go ahead and fork the repo and start making changes. Otherwise, here are the steps for local installation:
 1. Create an account at [Formik](https://formik.com/?utm_source=smakosh)
@@ -46,15 +46,15 @@ If you're familiar with Gatsby, go ahead and fork the repo and start making chan
 
 [![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.co?utm_source=smakosh)
 
-# How the project was made
+## How the project was made
 
 This project was made with a theme called "Gatsby theme portfolio." What follows is the original readme from this theme.
 
-## Theme
+### Theme
 
 [Gatsby-theme-portfolio](https://github.com/smakosh/gatsby-theme-portfolio)
 
-## Features
+### Features
 
 - Eslint/Prettier configured
 - Scores 100% on a11y / Performance / PWA / SEO
@@ -70,15 +70,15 @@ This project was made with a theme called "Gatsby theme portfolio." What follows
 - Functional components with ~~Recompose~~ React Hooks! ~~ready to migrate to React hooks!~~
 - Fetches your Github pinned projects with most stars (You could customize this if you wish)
 
-## Design
+### Design
 
 Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfolio-for-developers)
 
 
 
-## Prerequisites
+### Prerequisites
 
-### Online
+#### Online
 
 1. Create an account at [Formik](https://formik.com/?utm_source=smakosh) and grab your form endpoint url
 2. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
@@ -91,7 +91,7 @@ Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfo
 
 To Vercel's now secrets UI form.
 
-### Locally
+#### Locally
 
 1. Create an account at [Formik](https://formik.com/?utm_source=smakosh)
 2. Install [Yarn](https://yarnpkg.com/en/)
@@ -99,7 +99,7 @@ To Vercel's now secrets UI form.
 4. Run `cp .env.development.template .env.development`
 5. Run `yarn && yarn start`
 
-### Deploying locally to Vercel
+#### Deploying locally to Vercel
 
 I highly recommend that you push to GitHub/GitLab and deploy your repository to Vercel instead or just hit the Deploy button.
 
@@ -108,7 +108,7 @@ Otherwise, you will have to do the following:
 1. Add your secrets one by one using the [Now CLI](https://vercel.co/docs/now-cli)
 2. Run `now`
 
-### Clean the cache
+#### Clean the cache
 
 This removes the `.cache/` & `public/` folders
 
@@ -116,7 +116,7 @@ This removes the `.cache/` & `public/` folders
 yarn reset
 ```
 
-## Built with
+### Built with
 
 - Adobe XD
 - Gatsby
@@ -126,11 +126,11 @@ yarn reset
 - VSCode
 - And these useful of JavaScript libraries & Gatsby plugins [package.json](package.json)
 
-## License
+### License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Contributors
+### Contributors
 
 - [Ajay NS](https://github.com/ajayns) https://github.com/smakosh/gatsby-portfolio-dev/pull/3
 - [Ryan Lee](https://github.com/drdgvhbh) https://github.com/smakosh/gatsby-portfolio-dev/pull/6
@@ -141,6 +141,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 - [Michael Seifarth](https://github.com/Kageetai) https://github.com/smakosh/gatsby-portfolio-dev/pull/27
 - [Smakosh](https://smakosh.com)
 
-## Support
+### Support
 
 If you love this Gatsby template and want to support me, you can do so through my GitHub profile.
