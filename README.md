@@ -1,8 +1,54 @@
-# Portfolio for developers
+# Code for Dallas Website
+
+A clean and modern homepage for a clean and modern organization. This site was built using Gatsby, a static site generator. Currently under development.
+
+# To do
+
+Aside from minor optimizations, here are the main checklist items before we move to production:
+- Edit environment variables (GitHub token, Formcarry endpoint and Recaptcha key). 
+- Update projects section, which currently just fetches Anthony's top repositories from GitHub (we could replace it with a slideshow or something).
+- Update team member descriptions and photos.
+
+# Contributing
+
+We welcome contributions to this project. First of all, here's the project structure:
+
+## Structure
+
+```bash
+.
+├── data
+│   └── config              # SEO related tags
+├── src
+│   └── assets              # Assets
+│   │   │── icons             # icons
+│   │   │── illustrations     # illustrations from (undraw.co)
+│   │   └── thumbnail         # cover of your website when it's shared to social media
+│   ├── components          # Components
+│   │   │── common            # Common components
+│   │   │── landing           # Components used on the landing page
+│   │   └── theme             # Header & Footer
+│   └── pages               # Pages
+└── static                  # favicon & Netlify redirects
+```
+
+## Get started
+
+If you're familiar with Gatsby, go ahead and fork the repo and start making changes. Otherwise, here are the steps for local installation:
+1. Create an account at [Formik](https://formik.com/?utm_source=smakosh)
+2. Install [Yarn](https://yarnpkg.com/en/)
+3. Grab a Google recaptcha key from [Google Recaptcha](https://www.google.com/recaptcha/admin)
+4. Run `cp .env.development.template .env.development`
+5. Run `yarn && yarn start`
+
 
 [![Deploy with Vercel](https://vercel.co/button)](https://vercel.co/new/project?template=https://github.com/smakosh/gatsby-portfolio-dev)
 
 [![Powered by Vercel](./powered-by-vercel.svg)](https://vercel.co?utm_source=smakosh)
+
+# How the project was made
+
+This project was made with a theme called "Gatsby theme portfolio." What follows is the original readme from this theme.
 
 ## Theme
 
@@ -28,24 +74,7 @@
 
 Project on [Behance](https://www.behance.net/gallery/74172961/Free-Gatsby-portfolio-for-developers)
 
-## Structure
 
-```bash
-.
-├── data
-│   └── config              # SEO related tags
-├── src
-│   └── assets              # Assets
-│   │   │── icons             # icons
-│   │   │── illustrations     # illustrations from (undraw.co)
-│   │   └── thumbnail         # cover of your website when it's shared to social media
-│   ├── components          # Components
-│   │   │── common            # Common components
-│   │   │── landing           # Components used on the landing page
-│   │   └── theme             # Header & Footer
-│   └── pages               # Pages
-└── static                  # favicon & Netlify redirects
-```
 
 ## Prerequisites
 
