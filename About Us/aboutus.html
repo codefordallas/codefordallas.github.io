@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px 50px 50px 50px;
+}
+
+.nav a {
+  float: right;
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  
+  background-color: #ddd;
+  color: black;
+}
+
+.nav a.active {
+  background-color: red;
+  color: white;
+}
+#pegasus{
+    position:absolute;
+    top:80px; 
+    left:75px;
+    width:100px;
+    height:100px;
+    overflow:hidden;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+.content {
+	align: left;
+	
+}
+.navsearch{
+	display: inline-block;
+	text-align: center;
+	margin-left: 200px;
+	/*border: 1px solid black;*/
+}
+.navsearch button{ 
+	align-self: right;
+    background-color: red; 
+    color: #f2f2f2; 
+    float: right; 
+    padding: 10px 10px; 
+    margin-right: 16px; 
+    margin-left: 5px;
+    font-size: 12px; 
+    border: none; 
+    cursor: pointer; 
+        }  
+.content.img{
+	align-self: left;
+}
+
+.content.p{
+	float: right;
+	width: 300px;
+    border: 15px blue;
+    padding: 50px;
+    margin: 20px;
+}
+.box{
+	border: 10px solid black;
+	float: right;
+	width: 500px;
+	height: 400px;
+	margin-right: 100px;
+	margin-top: 50px;
+	padding: 50px 50px 50px 50px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1 >Code for Dallas</h1>
+
+<div class="nav">
+	<a href="Contactus">ContactUs</a>
+	<a href="Collaborate">Collaborate</a>
+	<a href="Events">Events</a>
+	<a href="Projects">Projects</a>
+ 	<a class="active" href="#About us">About Us</a>
+  
+</div>
+
+<div class="navsearch"> 
+    <form action="#"> 
+    <input type="text"  placeholder=" Search"  name="search"> 
+    <button> <i class="find"   style="font-size: 18px;">  </i> </button> 
+     </form> 
+        
+        </div> 
+    
+
+<img src="pegasus.jpg" id="pegasus">
+
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+
+<div class="content">
+		<img src="codefordallas.jpeg">
+
+		<div class="box">
+	<p style="font-size: 18px; text-align: center; "><b> About Us </b></p>
+	<br>
+	<p> Code for Dallas is an official Code for America Brigade in Dallas, TX working on projects with government and community partners to improve people's lives.</p>
+
+	<br>
+	<p style="font-size: 18px; text-align: center; "><b> Vision </b></p>
+</div>
+	
+</div>
+</body>
+</html>
