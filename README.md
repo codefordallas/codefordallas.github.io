@@ -1,23 +1,21 @@
 # Code for Dallas Website
 
-## Development
+This is currently a work in progress (WIP).
 
-Install [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com). Install dependencies using
+## Suggested Wireframe
 
-```bash
-$ yarn
-```
+Outlined of wireframe is located [here](https://miro.com/app/board/uXjVMT5VFJM=/?moveToWidget=3458764553400173935&cot=14):
 
-To build the latest version of the site, run
+-![WireFrame for Site](/static/images/README/2023-WireFrame.jpg "Wireframe for Site")
 
-```bash
-$ yarn build
-```
+# Site Requirements
 
-and then open the `index.html` in your browser. You can also use
+We are currently building this project. Additional information to come on:
 
-```bash
-$ yarn start
-```
+- how to contribute
+- instructions for submitting a proposal
+- joining as a member (Meetup)
 
-to run a local development server.
+# Resources
+
+Documentation to come!
