@@ -1,0 +1,44 @@
+header {
+    align-items: center;
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    /* background-color: #282c34; */
+    width: 100%;
+}
+
+.header_logo_div {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo_image {
+    height: 2em;
+}
+
+.header_menu_list {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.header_menu_item {
+    list-style: none;
+}
+
+#Header {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+section#Header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#Header h1 {
+    font-size: 2.5rem;
+    font-family: sans-serif;
+    margin: 0;
+    width: 100%;
+}
