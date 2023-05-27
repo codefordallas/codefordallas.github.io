@@ -1,0 +1,306 @@
+/* ===================================================================
+ *
+ *  Kassandra Resume v2.0 HOME Section Stylesheet
+    20230206
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  # HEADER styling
+        ## header logo
+        ## mobile menu toggle
+        ## navigation
+        ## responsive header needs
+  ===================================================================*/
+
+/* ===================================================================
+ * # header styles - (_site-layout.scss)
+ *
+ * ------------------------------------------------------------------- */
+
+ .nav-header {
+    /* display: flex;
+    align-items: center; */
+    width: 100%;
+    height: 72px; /* without this the other header components touch the top */
+    background-color: transparent;
+    /* position: absolute; */  /* having this caused overlap */
+    top: 0;
+    z-index: 500;
+}
+
+.nav-header.offset {
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.nav-header.scrolling {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.nav-header.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #000000 !important;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 600;
+    color: white;
+}
+
+/* .nav-header.sticky .header-logo a { */
+.nav-header.sticky .header-logo img {
+    margin: 0;
+}
+
+.nav-header.sticky .header-nav-wrap {
+    top: 0;
+}
+
+.nav-header.sticky.scrolling {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* -------------------------------------------------------------------
+ * ## header logo - (_site-layout.css)
+ * ------------------------------------------------------------------- */
+
+/* .header-logo {
+    display: inline-block;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 501;
+}
+
+.header-logo img {
+    display: block;
+    margin: 9px 0 0 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    width: 80px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+} */
+
+
+/* -------------------------------------------------------------------
+ * ## mobile menu toggle - (_site-layout.css)
+ * ------------------------------------------------------------------- */
+
+.header-menu-toggle {
+    color: rgba(255, 255, 255, 0.5);
+    display: none;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400; /* regular */
+    height: 42px;
+    letter-spacing: .2rem;
+    line-height: 42px;
+    position: absolute;
+    right: 29px;
+    top: 18px;
+    width: 42px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.header-menu-toggle:hover, .header-menu-toggle:focus {
+    color: #FFFFFF;
+}
+
+.header-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    position: absolute;
+    left: 9px;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    background-color: white;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+
+.header-menu-toggle span::before,
+.header-menu-toggle span::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    position: absolute;
+    left: 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.header-menu-toggle span::before {
+    top: -9px;
+}
+
+.header-menu-toggle span::after {
+    bottom: -9px;
+}
+
+.nav-header.sticky .header-menu-toggle {
+    top: 12px;
+}
+
+.header-menu-toggle.is-clicked span {
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.header-menu-toggle.is-clicked span::before,
+.header-menu-toggle.is-clicked span::after {
+    background-color: white;
+}
+
+.header-menu-toggle.is-clicked span::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.header-menu-toggle.is-clicked span::after {
+    bottom: 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+
+/* -------------------------------------------------------------------
+ * ## navigation - (_site-layout.scss)
+ * ------------------------------------------------------------------- */
+
+.header-nav-wrap {
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-size: 11px;
+    font-weight: 700; /* bold */
+    letter-spacing: .25rem;
+    /* position: absolute; */
+    right: 50px;
+    text-transform: uppercase;
+    top: 9px;
+}
+
+.header-nav {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    height: 72px; /* may not be needed? */
+}
+
+.header-nav li {
+    display: inline-block;
+    padding-left: 0;
+    margin-right: 2rem;
+}
+
+#headerNav li {
+    line-height: 72px;
+    /* color: #FFFFFF; */
+}
+#headerNav li:hover {
+    cursor: pointer;
+}
+.header-nav li a {
+    display: block;
+    line-height: 72px;
+    color: #FFFFFF;
+}
+
+.header-nav li.current a, .header-nav li.current, #headerNav li.current {
+    color: #FF69B4; /* PINK - FF69B4 */
+    font-family: 'Noto Sans Cherokee', sans-serif;
+    font-weight: 800; /* extrabold */
+}
+
+.highlights {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+/* -------------------------------------------------------------------
+ * responsive:
+ * header
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 800px) {
+    .header-logo {
+        left: 40px;
+    }
+    .header-nav-wrap {
+        display: none;
+        height: auto;
+        width: 100%;
+        right: auto;
+        top: 0;
+        left: 0;
+        /* background-color: #000000; */
+        padding: 120px 40px 21px;
+    }
+    .header-nav-wrap .header-nav {
+        display: block;
+        height: auto;
+        margin: 0 0 4.2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .header-nav-wrap .header-nav li {
+        display: block;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.07);
+    }
+    .header-nav-wrap .header-nav li a, .header-nav li {
+        padding: 18px 0;
+        line-height: 18px;
+    }
+    .header-menu-toggle {
+        display: block;
+    }
+    .highlights {
+        flex-flow: column nowrap;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .highlights {
+        flex-flow: row nowrap;
+    }
+}
+
+
+/* -------------------------------------------------------------------
+ * make sure the menu is visible on larger screens
+ * ------------------------------------------------------------------- */
+
+@media only screen and (min-width: 801px) {
+    .header-nav-wrap {
+        display: block !important;
+    }
+}
