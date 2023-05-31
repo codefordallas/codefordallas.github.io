@@ -28,9 +28,8 @@ Our first step was to build the "bare bones" for our React app. This meant we ne
 - [#36](https://github.com/codefordallas/codefordallas.github.io/pull/36) for header
 - [#34](https://github.com/codefordallas/codefordallas.github.io/pull/34) for about section
 - [#37](https://github.com/codefordallas/codefordallas.github.io/pull/37) for projects
+- [#48](https://github.com/codefordallas/codefordallas.github.io/pull/48) for donations section
 - [#35](https://github.com/codefordallas/codefordallas.github.io/pull/35) for footer
-
-It was found out after we began working on integration into a react app that the donations section was done in [this branch](https://github.com/codefordallas/codefordallas.github.io/tree/sherman_components) and will need to be re-integrated. (Not copied, as we want to ensure every contributor gets recognition for their efforts.)
 
 The integration into a React app was meant to be a learning session with all volunteers. It was found during prep that this would not be possible, as there were several issues that needed to be addressed before integration. This was completed under [issue39-reactapp](https://github.com/codefordallas/codefordallas.github.io/tree/issue39-reactapp) branch and will be used during the next group meeting for walkthrough of what was done, which will also be used to discuss:
 - next steps (including announcement of moving to real best practices, since the React app brings everything together)
