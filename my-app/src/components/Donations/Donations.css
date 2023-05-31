@@ -18,3 +18,8 @@
     padding-bottom: 2em;
     padding-top:  2rem;
 }
+
+#Donations .btn {
+    float: right;
+    border: 2px solid black
+}
