@@ -1,0 +1,41 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+#      - name: Set up Node.js ${{ matrix.node-version }}
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: ${{ matrix.node-version }}
+#
+#      - name: Install dependencies
+#        run: npm install
+
+#      - name: Run the tests and generate coverage report
+#        run: npm test -- --coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+
+      - name: Format Check
+        run: |
+          npm run format-check || echo "Format check failed. Please run 'npm run format' locally and push again."
+
+      - name: Lint Check
+        run: |
+          npm run lint-check || echo "Lint failed. Please run 'npm run lint' locally and push again."

@@ -1,0 +1,81 @@
+.projects {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: blueviolet;
+}
+
+.header {
+  margin-bottom: 1rem;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 300px;
+  /* margin-top: 1.5rem; */
+  margin-right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  /*#e9e9e9*/
+  scroll-snap-align: start;
+}
+
+.card img {
+  width: 100%;
+  /* border-radius: 4px 4px 0 0; */
+}
+
+.card-description {
+  padding: 1.5rem;
+}
+
+.card-description h3 {
+  margin-top: 0;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.card-buttons .btn {
+  text-decoration: none;
+  /* flex: 1;
+    padding: 0.5rem; */
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.card-buttons .btn:hover {
+  background-color: #000;
+  color: #ff0; /* Change text color to yellow */
+}
+
+.card-buttons .btn:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 200px;
+    margin-top: 1.5rem;
+    margin-right: 10px;
+  }
+}
