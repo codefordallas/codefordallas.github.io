@@ -1,0 +1,22 @@
+#About {
+  padding: 2em;
+  /* background-color: #f9f9f9; */
+  background-color: hsl(0, 0%, 92%);
+  color: #333;
+}
+
+#About h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+#About p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+#About h3 {
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
