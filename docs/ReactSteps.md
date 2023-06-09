@@ -1,8 +1,10 @@
-Run `npx create-react-app my-app` - you will run `npm install react-scripts@latest` to update tooling
+Run `npx create-react-app my-app` - you will run `npm install react-scripts@latest` to update tooling as needed.
 
 Check to ensure no issues with base creation by CD into folder and running `npm start`.
 
-Move files and folder from `src` to `my-app/src`
+Move files and folder from `src` to `my-app/src`. This will bring in the original files with this newly created React app.
+
+Move everything in the my-app folder to the base folder, since GitHub pages will not be looking in subfolders for the index file. Delete the my-app folder. Check to ensure working by running `npm start` again.
 
 # Adding In Sections Made From Volunteers
 
