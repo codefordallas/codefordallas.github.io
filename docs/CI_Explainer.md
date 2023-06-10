@@ -1,6 +1,6 @@
 # About This File
 
-In order to assist our volunteers in understanding [the Continuous Integration file](../.github/workflows/ci.yaml), this file will be providing links and additional insights.
+In order to assist our volunteers in understanding [the Continuous Integration file](../.github/workflows/ci.yaml), this README will be providing links and additional insights.
 
 This will not be a complete explanation - you can learn more [here](https://docs.github.com/en/actions/learn-github-actions).
 
@@ -16,13 +16,15 @@ In our case, as of early June 2023, it is being proposed to use [filters](https:
 - push to **master** (direct merge)
 - PR to (current "main branch") **v1-mvp**
 
+We are currently discussing with original volunteer about also adding **master** to the PR section, since people should not be making a direct merge to **master**.
+
 ## Jobs:  Build Steps
 
 ### Uses
 
 In the `jobs > build > steps` section, there are some `uses` that include:  `actions/checkout@vX` (where X is a number)
 
-This relates to the GitHub Actions marketplace [checout](https://github.com/marketplace/actions/checkout). This was determined from [here](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-from-github-marketplace).
+This relates to the GitHub Actions marketplace [checkout](https://github.com/marketplace/actions/checkout) action. This was determined from [here](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions#adding-an-action-from-github-marketplace).
 
 This allows the action to checkout your repo.
 
@@ -33,3 +35,7 @@ This allows you to [run/execute scripts](https://docs.github.com/en/actions/lear
 As of early June 2023, the current proposed CI config file has the following to run:
 - [format-check](https://www.npmjs.com/package/format-check) - published a year ago (2022) but unclear README
 - [lint-check](https://www.npmjs.com/package/lint-check) - uploaded 2 years ago (2021)
+
+We have proposed instead the following:
+- [eslint](https://www.npmjs.com/package/eslint) (over 32M weekly downloads and last updated June 2, 2023)
+- [prettier](https://www.npmjs.com/package/prettier) (over 29M weekly downloads with last update April 2023)
