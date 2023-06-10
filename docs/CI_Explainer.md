@@ -13,7 +13,7 @@ You can understand the workflow file [here](https://docs.github.com/en/actions/l
 Learn more about this [here](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on).
 
 In our case, as of early June 2023, it is being proposed to use [filters](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#using-filters) - specifically on:
-- push to **master**
+- push to **master** (direct merge)
 - PR to (current "main branch") **v1-mvp**
 
 ## Jobs:  Build Steps
