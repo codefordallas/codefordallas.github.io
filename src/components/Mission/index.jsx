@@ -23,7 +23,7 @@ class Mission extends Component {
       <Wrapper>
         <Heading>Mission Statement</Heading>
         <Text>
-          We're just trying to make the world a better place and come up with
+          We&apos;re just trying to make the world a better place and come up with
           great mission statements!
         </Text>
       </Wrapper>

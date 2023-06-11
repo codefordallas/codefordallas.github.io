@@ -2,6 +2,7 @@ import React from "react";
 import "./header.css";
 import Nav from "../Nav/nav";
 
+// eslint-disable-next-line react/prop-types
 export default function Header({ setActiveNavStr }) {
   return (
     <section id="Header">
