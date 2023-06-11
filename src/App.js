@@ -1,18 +1,18 @@
 // import logo from './logo.svg';
-import './App.css';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import { Waypoint } from 'react-waypoint';
+import "./App.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import { Waypoint } from "react-waypoint";
 
-import clearNav from './components/Nav/clearNavFunc';
+import clearNav from "./components/Nav/clearNavFunc";
 
-import Header from './components/Header/header';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Donations from './components/Donations/Donations'
+import Header from "./components/Header/header";
+import About from "./components/About/About";
+import Projects from "./components/Projects/Projects";
+import Donations from "./components/Donations/Donations";
 
 import { useDetectScroll } from "@smakss/react-scroll-direction"; // https://stackoverflow.com/a/62497293/10474024
-import Footer from './components/Footer/Footer';
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [activeNavStr, setActiveNavStr] = useState("navHome");
@@ -20,7 +20,6 @@ function App() {
   const [scrollDir] = useDetectScroll({});
 
   useEffect(() => {
-
     // --- Original working section used for nav scrolling ---
     const navSec = document.getElementsByClassName("nav-header")[0];
     const sticky = document.getElementById("Header").offsetHeight - 30; // cannot use hook - otherwise it re-renders
@@ -34,7 +33,6 @@ function App() {
         navSec.classList.add("sticky");
         navSec.classList.add("offset");
         navSec.classList.add("scrolling");
-
       } else {
         navSec.classList.remove("sticky");
         navSec.classList.remove("offset");
@@ -59,25 +57,40 @@ function App() {
   //   setStickyNum();
   // }, []);
 
-  function wpDance(wpType, wpNum, loc, prevWPpos, currWPpos, evt,
-    wpTop, vpTop, vpBtm, data) {
-
+  function wpDance(
+    wpType,
+    wpNum,
+    loc,
+    prevWPpos,
+    currWPpos,
+    evt,
+    wpTop,
+    vpTop,
+    vpBtm,
+    data
+  ) {
     console.log(`activeNavStr:  ${activeNavStr}`);
     console.log(`navClickedStr:  ${navClickedStr}`);
 
     const destination = data.dest;
     if (scrollDir === "down") {
-      console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> going into ${destination}`);
+      console.log(
+        `WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> going into ${destination}`
+      );
     }
     // else if ( scrollDir === "still" ) {
 
     // }
     else {
-      console.log(`WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> likely the start`);
+      console.log(
+        `WP${wpNum} ${wpType} (${loc}) |  scrollDir: ${scrollDir}  ---> likely the start`
+      );
     }
 
     const intPrevNavStr = data.prev;
-    console.log(`WP${wpNum} ${wpType} (${loc}) | intPrevNavStr: ${intPrevNavStr}`);
+    console.log(
+      `WP${wpNum} ${wpType} (${loc}) | intPrevNavStr: ${intPrevNavStr}`
+    );
     let intActiveNavStr;
     if (navClickedStr === "") {
       intActiveNavStr = data.curr;
@@ -85,17 +98,25 @@ function App() {
       intActiveNavStr = navClickedStr;
     }
 
-    console.log(`WP${wpNum} ${wpType} (${loc}) | intActiveNavStr: ${intActiveNavStr}`);
+    console.log(
+      `WP${wpNum} ${wpType} (${loc}) | intActiveNavStr: ${intActiveNavStr}`
+    );
     console.log(intActiveNavStr);
     // const intNextNavStr = data.next;
     // console.log(`WP${wpNum} ${wpType} (${loc}) | intNextNavStr: ${intNextNavStr}`);
 
     // getLIelems("headerNav", "li");
 
-    console.log(`WP${wpNum} ${wpType} (${loc}) |  previousPosition: ${prevWPpos}`);
-    console.log(`WP${wpNum} ${wpType} (${loc}) |  currentPosition: ${currWPpos}`);
+    console.log(
+      `WP${wpNum} ${wpType} (${loc}) |  previousPosition: ${prevWPpos}`
+    );
+    console.log(
+      `WP${wpNum} ${wpType} (${loc}) |  currentPosition: ${currWPpos}`
+    );
     if (!evt) {
-      console.log(`=============== WP${wpNum} ${wpType} (${loc}) | This came from a menu click? (likely just the start of site here) ===============`);
+      console.log(
+        `=============== WP${wpNum} ${wpType} (${loc}) | This came from a menu click? (likely just the start of site here) ===============`
+      );
     }
     console.log(`WP${wpNum} ${wpType} (${loc}) |  event: ${evt}`);
     console.log(`WP${wpNum} ${wpType} (${loc}) |  waypointTop: ${wpTop}`);
@@ -121,7 +142,9 @@ function App() {
         // console.log(`WP${wpNum} ${wpType} (${loc}) next (uncertain if updated): ${nextActiveNav}`);
         // console.log(nextActiveNav);
 
-        console.log(`SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`)
+        console.log(
+          `SEtting NAv classes with ${intPrevNavStr} and ${intActiveNavStr}`
+        );
 
         // let temp = document.getElementById(intPrevNavStr);
         // console.log(temp);
@@ -148,7 +171,6 @@ function App() {
         // }
         // if (currentURL.includes("#")) {
         //   console.log(`WP${wpNum} ${wpType} (${loc}) | lastNav URL:  ${lastNav}`)
-
 
         //   if (clickedBool) {
         //     console.log(`WP${wpNum} ${wpType} (${loc}) | A LINK WAS CLICKED!!! Must update NAV`);
@@ -190,7 +212,6 @@ function App() {
         clearNav(intActiveNavStr);
       }
     }
-
   }
 
   return (
@@ -211,237 +232,453 @@ function App() {
         </a>
       </header> */}
       <Waypoint // WP0 - between #Header and #About
-        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onEnter={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           // console.log("isntantiation - setting active nav to navHome");
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up from bottom
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up from bottom
               data = {
                 prev: "navHome",
                 curr: "navHome",
-                dest: "about section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down from top
+                dest: "about section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down from top
               data = {
                 prev: "navAbout",
                 curr: "navHome",
-                dest: "home section"
-              }
+                dest: "home section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 0, "after header / before About", previousPosition, currentPosition, event, 
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OE",
+              0,
+              "after header / before About",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OE", 0, "after header / before About", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OE",
+              0,
+              "after header / before About",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
             setNavClickedStr("");
           }
         }}
-        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onLeave={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up past top
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up past top
               data = {
                 prev: "navHome", // navHome?
                 curr: "navAbout",
-                dest: "projects section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down past bottom
+                dest: "projects section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down past bottom
               data = {
                 prev: "navAbout",
                 curr: "navHome",
-                dest: "home section"
-              }
+                dest: "home section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OL", 0, "after Header / before About", previousPosition, currentPosition, event,
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OL",
+              0,
+              "after Header / before About",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OL", 0, "after Header / before About", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OL",
+              0,
+              "after Header / before About",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
           }
         }}
       />
       <About />
       <Waypoint // WP1 - between #About and #Projects
-        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onEnter={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           // console.log("isntantiation - setting active nav to navHome");
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up from bottom
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up from bottom
               data = {
                 prev: "navAbout",
                 curr: "navAbout",
-                dest: "projects section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down from top
+                dest: "projects section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down from top
               data = {
                 prev: "navDonations",
                 curr: "navProjects",
-                dest: "about section"
-              }
+                dest: "about section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 1, "after About / before Projects", previousPosition, currentPosition, event, 
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OE",
+              1,
+              "after About / before Projects",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OE", 1, "after About / before Projects", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OE",
+              1,
+              "after About / before Projects",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
             setNavClickedStr("");
           }
         }}
-        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onLeave={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up past top
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up past top
               data = {
                 prev: "navProjects", // navHome?
                 curr: "navDonations",
-                dest: "footer section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down past bottom
+                dest: "footer section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down past bottom
               data = {
                 prev: "navProjects",
                 curr: "navAbout",
-                dest: "about section"
-              }
+                dest: "about section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OL", 1, "before Projects", previousPosition, currentPosition, event,
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OL",
+              1,
+              "before Projects",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OL", 1, "before Projects", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OL",
+              1,
+              "before Projects",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
           }
         }}
       />
       <Projects />
       <Waypoint // WP2 - between #Projects and #Donations
-        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onEnter={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           // console.log("isntantiation - setting active nav to navHome");
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up from bottom
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up from bottom
               data = {
                 prev: "navAbout",
                 curr: "navProjects", // currently too short of a site to have this be navProjects onEnter
-                dest: "footer section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down from top
+                dest: "footer section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down from top
               data = {
                 prev: "navDonations",
                 curr: "navProjects",
-                dest: "about section"
-              }
+                dest: "about section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 2, "after About / before Projects", previousPosition, currentPosition, event, 
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OE",
+              2,
+              "after About / before Projects",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OE", 2, "after About / before Projects", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OE",
+              2,
+              "after About / before Projects",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
             setNavClickedStr("");
           }
         }}
-        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onLeave={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up past top
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up past top
               data = {
                 prev: "navProjects", // navHome?
                 curr: "navDonations",
-                dest: "footer section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down past bottom
+                dest: "footer section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down past bottom
               data = {
                 prev: "navProjects",
                 curr: "navAbout",
-                dest: "header section"
-              }
+                dest: "header section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OL", 2, "after About / before Donations", previousPosition, currentPosition, event,
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OL",
+              2,
+              "after About / before Donations",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OL", 2, "after About / before Donations", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OL",
+              2,
+              "after About / before Donations",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
           }
         }}
       />
       <Donations />
       <Waypoint // WP3 - between #Donations and #Footer
-        onEnter={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onEnter={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           // console.log("isntantiation - setting active nav to navHome");
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up from bottom
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up from bottom
               data = {
                 prev: "navProjects",
                 curr: "navDonations", // currently too short of a site to have this be navDonations onEnter
-                dest: "footer section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down from top
+                dest: "footer section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down from top
               data = {
                 prev: "navDonations",
                 curr: "navDonations",
-                dest: "projects section"
-              }
+                dest: "projects section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OE", 3, "after Donations / before Footer", previousPosition, currentPosition, event, 
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OE",
+              3,
+              "after Donations / before Footer",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OE", 3, "after Donations / before Footer", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OE",
+              3,
+              "after Donations / before Footer",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
             setNavClickedStr("");
           }
         }}
-        onLeave={({ previousPosition, currentPosition, event, waypointTop, viewportTop, viewportBottom }) => {
+        onLeave={({
+          previousPosition,
+          currentPosition,
+          event,
+          waypointTop,
+          viewportTop,
+          viewportBottom,
+        }) => {
           let data = null;
           if (!navClickedStr) {
-            if (scrollDir === "down" || scrollDir === "still") { // line is going up past top
+            if (scrollDir === "down" || scrollDir === "still") {
+              // line is going up past top
               data = {
                 prev: "navDonations", // navHome?
                 curr: "navDonations",
-                dest: "footer section"
-              }
-            }
-            else { // SCROLLING UP - line is coming down past bottom
+                dest: "footer section",
+              };
+            } else {
+              // SCROLLING UP - line is coming down past bottom
               data = {
                 prev: "navDonations",
                 curr: "navProjects",
-                dest: "about section"
-              }
+                dest: "about section",
+              };
             }
             console.log("Calling the wpDance ...");
-            wpDance("OL", 3, "after Donations / before Footer", previousPosition, currentPosition, event,
-              waypointTop, viewportTop, viewportBottom, data);
-          }
-          else {
+            wpDance(
+              "OL",
+              3,
+              "after Donations / before Footer",
+              previousPosition,
+              currentPosition,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
+          } else {
             console.log("Calling the wpDance ...");
-            wpDance("OL", 3, "after Donations / before Footer", activeNavStr, navClickedStr, event, 
-              waypointTop, viewportTop, viewportBottom, data);
+            wpDance(
+              "OL",
+              3,
+              "after Donations / before Footer",
+              activeNavStr,
+              navClickedStr,
+              event,
+              waypointTop,
+              viewportTop,
+              viewportBottom,
+              data
+            );
           }
         }}
       />

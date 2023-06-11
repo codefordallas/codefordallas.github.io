@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   display: block;
-  background-color: #6FACD5;
+  background-color: #6facd5;
 `;
 
 const Heading = styled.h1`
@@ -21,8 +21,11 @@ class Mission extends Component {
   render() {
     return (
       <Wrapper>
-          <Heading>Mission Statement</Heading>
-          <Text>We're just trying to make the world a better place and come up with great mission statements!</Text>
+        <Heading>Mission Statement</Heading>
+        <Text>
+          We're just trying to make the world a better place and come up with
+          great mission statements!
+        </Text>
       </Wrapper>
     );
   }
