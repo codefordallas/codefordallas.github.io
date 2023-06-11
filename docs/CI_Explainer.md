@@ -4,6 +4,10 @@ In order to assist our volunteers in understanding [the Continuous Integration f
 
 This will not be a complete explanation - you can learn more [here](https://docs.github.com/en/actions/learn-github-actions).
 
+[Continous Integration](https://docs.gitlab.com/ee/ci/introduction/) is what developers call the automatic process of linting (checking code for style errors or erros in general), testing, and other checks BEFORE your branch is merged (integrated). This is done usually through platforms that are running "jobs" for these various tasks.
+
+Here we're using [GitHub Workflows](https://docs.github.com/en/actions/using-workflows) as our CI runner to execute these tasks for us.
+
 # Structure Explanations
 
 You can understand the workflow file [here](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions#understanding-the-workflow-file).
