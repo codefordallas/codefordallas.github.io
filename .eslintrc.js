@@ -1,19 +1,4 @@
 module.exports = {
-  settings: {
-    react: {
-      version: "detect",
-    },
-  },
-  env: {
-    browser: true,
-    es2021: true,
-  },
-  extends: ["eslint:recommended", "plugin:react/recommended", "prettier"],
-  overrides: [],
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-  },
-  plugins: ["react"],
-  rules: {},
+  extends: ["react-app", "plugin:jsx-a11y/recommended", "prettier"],
+  plugins: ["jsx-a11y"],
 };

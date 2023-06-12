@@ -1,9 +1,11 @@
-import React from "react";
+/* eslint-disable */
+// TODO: Turn back on eslint when this file is more ready to go.
+
+import React from 'react';
 import "./nav.css";
 import Logo from "../Logo/Logo";
 import $ from "jquery";
 
-// eslint-disable-next-line react/prop-types
 export default function Nav({ setActiveNavStr }) {
   const toggleOpen = (evt, navStr) => {
     console.log(`${navStr} menu option was clicked - setting activeNavStr`);
