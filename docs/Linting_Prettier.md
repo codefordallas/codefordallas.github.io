@@ -83,3 +83,4 @@ Another consideration is Jest for React. It is listed as a [possible environment
 # Additional Resources
 
 - [npm, ESLint, & Prettier](https://btholt.github.io/complete-intro-to-react-v5/eslint-prettier) Intro to React Info
+- ESLint was triggered on the `import React from "react";` line, but this is a legacy thing as per [here](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint) and can be turned off
