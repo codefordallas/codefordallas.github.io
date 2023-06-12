@@ -1,5 +1,5 @@
- /* eslint-disable */
- // TODO: Turn back on eslint when this file is more ready to go.
+/* eslint-disable */
+// TODO: Turn back on eslint when this file is more ready to go.
 
 import React from "react";
 // import './Nav.css';

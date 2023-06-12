@@ -1,7 +1,7 @@
 /* eslint-disable */
 // TODO: Turn back on eslint when this file is more ready to go.
 
-import React from 'react';
+import React from "react";
 import "./nav.css";
 import Logo from "../Logo/Logo";
 import $ from "jquery";
