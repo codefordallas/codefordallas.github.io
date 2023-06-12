@@ -61,6 +61,12 @@ Since we are using the config file itself, the default `esLintConfig` section in
 
 **NOTE:** you can disable lint checks by following [this](https://eslint.org/docs/latest/use/configure/rules#disabling-rules).
 
+### Configuration Notes
+
+As per [PR #42](https://github.com/codefordallas/codefordallas.github.io/pull/42), this web app was built in conjunction with [create-react-app](https://create-react-app.dev/). [Here](https://create-react-app.dev/docs/setting-up-your-editor/#extending-or-replacing-the-default-eslint-config) is additional information on what is needed for the ESLint config file in relation to this app setup.
+
+**NOTE:** there are also setups for IDE/code editors, so be sure to check out these options as they relate to your environment setup.
+
 ### Variable Explanations
 
 The `env` variable is used to [specify environments](https://eslint.org/docs/latest/use/configure/language-options#specifying-environments):
@@ -79,6 +85,8 @@ The `parserOptions` allows us to configure a [custom parser](https://eslint.org/
 May want to consider integrating [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) or even [prettier-eslint](https://github.com/prettier/prettier-eslint).
 
 Another consideration is Jest for React. It is listed as a [possible environment](https://eslint.org/docs/latest/use/configure/language-options#specifying-environments). - Discussion for another time.
+
+As a reminder, it is safer for your HTML files to not use literal characters. For example - use `&apos;` instead of `'`. Your ESLint will take care of this for you.
 
 # Additional Resources
 
