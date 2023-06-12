@@ -70,7 +70,7 @@ The `env` variable is used to [specify environments](https://eslint.org/docs/lat
 The `extends` variable allows us to [extend the config file](https://eslint.org/docs/latest/use/configure/configuration-files#extending-configuration-files). We have:
 - [eslint:recommended](https://eslint.org/docs/latest/use/configure/configuration-files#using-eslintrecommended) for what the linter suggests
 - a [plugin](https://eslint.org/docs/latest/use/configure/configuration-files#using-a-configuration-from-a-plugin) for React recommendations ... more on plugin configuration can be found [here](https://eslint.org/docs/latest/use/configure/plugins)
-- prettier
+- [prettier](https://github.com/prettier/eslint-plugin-prettier#installation)
 
 The `parserOptions` allows us to configure a [custom parser](https://eslint.org/docs/latest/use/configure/parser). We currently have ours set to latest `ecmaVersion` and using [module syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) for `sourceType`.
 
