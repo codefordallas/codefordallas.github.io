@@ -8,11 +8,17 @@ This specific update is related to [#58](https://github.com/codefordallas/codefo
 
 ## Adding The Packages
 
-As per [here](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file) you would run `npm install <package-name> --save-dev`to save them as [`devDependencies`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#devdependencies) in your `package.json` file.
+As per [here](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file) you would run `npm install <package-name> --save-dev` to save them as [`devDependencies`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json#devdependencies) in your `package.json` file.
 
-Or in our instance, simply run `npm install` - it is already in our `package.json` file.
+Examples might look like:
 
-1. [install & configure prettier](https://prettier.io/docs/en/install.html)
+```
+npm install eslint --save-dev
+npm install eslint-plugin-jsx-a11y --save-dev
+npm install --save-dev --save-exact prettier
+```
+
+Or in our instance, simply run `npm install` - as the current requirements are already in our `package.json` file.
 
 ## Changes To `package.json` File
 
@@ -23,7 +29,6 @@ Or in our instance, simply run `npm install` - it is already in our `package.jso
 - [format-check](https://prettier.io/docs/en/cli.html#--check) will output a human-friendly message and a list of unformatted files, if any
 
 Additional [`devDependencies`](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file) (dependencies not necessary to bundle with PROD)) were added - see more about these below. Here are the new ones:
-- eslint
 - eslint-config-prettier
 - eslint-plugin-react
 - prettier
@@ -69,14 +74,20 @@ As per [PR #42](https://github.com/codefordallas/codefordallas.github.io/pull/42
 
 ### Variable Explanations
 
-The `env` variable is used to [specify environments](https://eslint.org/docs/latest/use/configure/language-options#specifying-environments):
+The `env` variable is generally used to [specify environments](https://eslint.org/docs/latest/use/configure/language-options#specifying-environments) like:
 - implements [es2021](https://eslint.org/docs/latest/rules/logical-assignment-operators), which includes operator assignments
 - tells linter that it will be run in the browser
 
 The `extends` variable allows us to [extend the config file](https://eslint.org/docs/latest/use/configure/configuration-files#extending-configuration-files). We have:
-- [eslint:recommended](https://eslint.org/docs/latest/use/configure/configuration-files#using-eslintrecommended) for what the linter suggests
-- a [plugin](https://eslint.org/docs/latest/use/configure/configuration-files#using-a-configuration-from-a-plugin) for React recommendations ... more on plugin configuration can be found [here](https://eslint.org/docs/latest/use/configure/plugins)
+- `react-app` (more on this [here](https://stackoverflow.com/a/59633134/10474024))
 - [prettier](https://github.com/prettier/eslint-plugin-prettier#installation)
+
+In the additional `plugins` section (more on plugin configuration can be found [here](https://eslint.org/docs/latest/use/configure/plugins)):
+- [jsx-ally](https://www.npmjs.com/package/eslint-plugin-jsx-a11y) (this could instead have been an extension as per [here](https://www.npmjs.com/package/eslint-plugin-jsx-a11y))
+
+<u>Prior</u> extensions used (should you want to review for your own projects):
+- [eslint:recommended](https://eslint.org/docs/latest/use/configure/configuration-files#using-eslintrecommended) for what the linter suggests
+- a [plugin](https://eslint.org/docs/latest/use/configure/configuration-files#using-a-configuration-from-a-plugin) for React recommendations
 
 The `parserOptions` allows us to configure a [custom parser](https://eslint.org/docs/latest/use/configure/parser). We currently have ours set to latest `ecmaVersion` and using [module syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) for `sourceType`.
 
@@ -92,3 +103,5 @@ As a reminder, it is safer for your HTML files to not use literal characters. Fo
 
 - [npm, ESLint, & Prettier](https://btholt.github.io/complete-intro-to-react-v5/eslint-prettier) Intro to React Info
 - ESLint was triggered on the `import React from "react";` line, but this is a legacy thing as per [here](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html#eslint) and can be turned off
+- [install & configure prettier](https://prettier.io/docs/en/install.html)
+- Prettier [Editor Integration](https://prettier.io/docs/en/editors.html)
