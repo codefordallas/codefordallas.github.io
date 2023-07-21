@@ -32,8 +32,8 @@ const About = () => {
 
       <h3>How to Join</h3>
       <p>
-        If you're interested in joining Code for Dallas, get in touch with us
-        through our contact page, or come to one of our monthly meetups. We
+        If you&apos;re interested in joining Code for Dallas, get in touch with
+        us through our contact page, or come to one of our monthly meetups. We
         welcome people of all skill levels and backgrounds!
       </p>
     </section>

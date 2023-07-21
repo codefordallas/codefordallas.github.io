@@ -1,3 +1,6 @@
+/* eslint-disable */
+// TODO: Turn back on eslint when this file is more ready to go.
+
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
