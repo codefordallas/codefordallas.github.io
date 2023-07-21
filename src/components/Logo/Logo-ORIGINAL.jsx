@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Image = styled.img`
   max-width: 200px;
@@ -9,10 +8,8 @@ const Image = styled.img`
 
 class Logo extends Component {
   render() {
-    return (
-      <Image src="./static/images/logo.png" />
-    );
+    return <Image src="./static/images/logo.png" />;
   }
-};
+}
 
 export default Logo;

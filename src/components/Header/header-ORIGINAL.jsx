@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import Logo from '../Logo';
+import Logo from "../Logo";
 
 const Wrapper = styled.header`
   display: flex;
@@ -20,7 +20,7 @@ class Header extends Component {
     return (
       <Wrapper>
         <Logo />
-          <Title>Code For Dallas</Title>
+        <Title>Code For Dallas</Title>
       </Wrapper>
     );
   }
