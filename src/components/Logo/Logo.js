@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import ReactDOM from 'react-dom';
 
-import styled from 'styled-components';
+import styled from "styled-components";
 // import temp from '../../temp.png';  // from src main folder
 // import logo from './temp.png'  // local folder
 
@@ -25,6 +25,6 @@ class Logo extends Component {
       </div>
     );
   }
-};
+}
 
 export default Logo;

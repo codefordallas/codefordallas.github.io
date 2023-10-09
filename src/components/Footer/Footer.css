@@ -1,14 +1,14 @@
 .footer {
-    margin: auto;
-    width: 60%;
+  margin: auto;
+  width: 60%;
 }
 
 .footer-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.footer-links>div {
-    margin: 1em;
+.footer-links > div {
+  margin: 1em;
 }

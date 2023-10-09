@@ -1,0 +1,30 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ v1-mvp ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Format Check
+        run: |
+          npm run format-check || echo "Format check failed. Please run 'npm run format' locally and push again."
+
+      - name: Lint Check
+        run: |
+          npm run lint-check || echo "Lint failed. Please run 'npm run lint' locally and push again."
